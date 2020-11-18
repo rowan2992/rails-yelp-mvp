@@ -1,0 +1,15 @@
+<h1>New</h1>
+<h2>Please fill out this form</h2>
+
+<div class="form-group">
+<%= simple_form_for(@restaurant) do |f| %>
+<%= f.input :name %>
+<%= f.input :address %>
+<%= f.input :phone_number %>
+<%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+<%= f.submit class: "btn btn-info" %>
+
+<% end %>
+</div>
+
+<div><%= link_to 'Please take me back', restaurants_path, class: "btn btn-danger m-3" %></div>
